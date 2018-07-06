@@ -1,10 +1,13 @@
 package com.example.tkmappterTest.person.dao;
 
+import org.apache.ibatis.annotations.Mapper;
+
 import com.example.tkmappterTest.person.entity.Person;
 
-import tk.mybatis.mapper.common.Mapper;
 
-public interface PersonDao extends Mapper<Person> {
+
+@Mapper
+public interface PersonDao extends TKMapper<Person> {
 
 	
 }

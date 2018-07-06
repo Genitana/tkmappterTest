@@ -3,12 +3,12 @@ server:
 
 spring: 
   application:
-    name: mappTest
+    name: tkmappTest
   datasource: 
-    url: jdbc:dm://127.0.0.1:5236/test
+    url: jdbc:mysql://127.0.0.1:3306/test?characterEncoding=UTF-8&useSSL=false
     username: test
     password: 123123
-    driver-class: dm.jdbc.driver.DmDriver
+    driver-class: com.mysql.jdbc.Driver
     initialSize: 5  # 初始化大小，最小，最大
     minIdle: 5
     maxActive: 20
@@ -24,7 +24,7 @@ log:
   path: e://logs/${spring.application.name}
   level: 
     com.example.tkmappterTest.person.dao: debug   
-    
+#pagehelper分页插件配置    
 pagehelper:
     helperDialect: mysql
     reasonable: true

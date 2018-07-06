@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.example.tkmappterTest.person.dao.PersonDao;
 import com.example.tkmappterTest.person.entity.Person;
+import com.github.pagehelper.PageHelper;
 
 import tk.mybatis.mapper.entity.Condition;
 import tk.mybatis.mapper.entity.Example;
@@ -46,5 +47,13 @@ public class PersonService {
 		criteria.andLike("name", "%张%");		
 		List<Person> person = personDao.selectByExample(condition);
 		return person ;
+	}
+
+	public List<Person> findPersons(int page, int size) {
+		PageHelper.startPage(page, size);
+		Condition condition = new Condition(Person.class);
+		condition.setOrderByClause("uuid desc");
+		List<Person> persons = personDao.selectByExample(condition);
+		return persons;
 	}
 }
