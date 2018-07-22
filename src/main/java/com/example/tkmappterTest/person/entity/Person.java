@@ -1,3 +1,4 @@
+
 package com.example.tkmappterTest.person.entity;
 
 import java.io.Serializable;
@@ -16,9 +17,9 @@ public class Person implements Serializable {
 	@Id
 	private String uuid ;
 	private String name ;
-	private int sex ;
+	private Integer sex ;
 	private String country ;
-	private int age ;
+	private Integer age ;
 	public String getUuid() {
 		return uuid;
 	}
@@ -31,10 +32,10 @@ public class Person implements Serializable {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getSex() {
+	public Integer getSex() {
 		return sex;
 	}
-	public void setSex(int sex) {
+	public void setSex(Integer sex) {
 		this.sex = sex;
 	}
 	public String getCountry() {
@@ -43,12 +44,13 @@ public class Person implements Serializable {
 	public void setCountry(String country) {
 		this.country = country;
 	}
-	public int getAge() {
+	public Integer getAge() {
 		return age;
 	}
-	public void setAge(int age) {
+	public void setAge(Integer age) {
 		this.age = age;
 	}
 	
 
 }
+
