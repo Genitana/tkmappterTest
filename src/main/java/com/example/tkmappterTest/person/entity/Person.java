@@ -8,9 +8,9 @@ import javax.persistence.Table;
 
 @Table(name="person")
 public class Person implements Serializable {
-	
+
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = -5756999787029566802L;
 
@@ -50,7 +50,6 @@ public class Person implements Serializable {
 	public void setAge(Integer age) {
 		this.age = age;
 	}
-	
 
 }
 
