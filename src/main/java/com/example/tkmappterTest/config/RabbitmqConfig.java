@@ -14,6 +14,14 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @Configuration
 public class RabbitmqConfig {
 
+//    @Bean
+//    public SimpleRabbitListenerContainerFactory rabbitListenerContainerFactory(ConnectionFactory connectionFactory
+//    		,Jackson2JsonMessageConverter jackson2JsonMessageConverter) {
+//        SimpleRabbitListenerContainerFactory factory = new SimpleRabbitListenerContainerFactory();
+//        factory.setConnectionFactory(connectionFactory);
+//        factory.setMessageConverter(jackson2JsonMessageConverter);
+//        return factory;
+//    }
 	    @Bean
 	    public SimpleRabbitListenerContainerFactory rabbitListenerContainerFactory(ConnectionFactory connectionFactory
 	    		,Jackson2JsonMessageConverter jackson2JsonMessageConverter) {
